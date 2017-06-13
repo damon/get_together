@@ -17,17 +17,26 @@ get '/locations/suggest' do
   Location.suggest.to_json
 end
 
+get '/locations/tried' do
+  Location.tried.to_json
+end
+
+get '/locations/not-tried' do
+  Location.not_tried.to_json
+end
+
+
 get '/locations' do
   # default: all
   result = Location.all
 
-  if params[:filter]
-  	if params[:filter].downcase=="tried"
-      result = Location.tried
-    elsif params[:filter].downcase=="not-tried"
-      result = Location.not_tried
-    end
-  end
+  # if params[:filter]
+  # 	if params[:filter].downcase=="tried"
+  #     result = Location.tried
+  #   elsif params[:filter].downcase=="not-tried"
+  #     result = Location.not_tried
+  #   end
+  # end
   
   result.to_json
 end
