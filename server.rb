@@ -1,4 +1,5 @@
-require 'sinatra'
+require 'sinatra/base'
+require 'sinatra/json'
 require 'json'
 
 configure do
@@ -14,15 +15,15 @@ get '/' do
 end
 
 get '/locations/suggest' do
-  Location.suggest.to_json
+  json Location.suggest.to_json
 end
 
 get '/locations/tried' do
-  Location.tried.to_json
+  json Location.tried.to_json
 end
 
 get '/locations/not-tried' do
-  Location.not_tried.to_json
+  json Location.not_tried.to_json
 end
 
 
@@ -38,5 +39,5 @@ get '/locations' do
   #   end
   # end
   
-  result.to_json
+  json result.to_json
 end
