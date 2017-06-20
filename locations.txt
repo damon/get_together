@@ -1,0 +1,13 @@
+Juan Pelota,tried
+Vintage Heart Coffee,tried
+Seventh Flag Coffee,not-tried
+Patika,not-tried
+Fleet Coffee,not-tried
+Wright Bros. Brew & Brew,not-tried
+Figure 8 Coffee Purveyors,not tried
+Sa-Ten Coffee and Eats, not-tried
+Flat Track Coffee,not-tried
+Forthright,not-tried
+Jo's (SoCo),not-tried
+Stonehouse Coffee and Bar,not-tried
+Stouthaus Coffee Pub,not-tried

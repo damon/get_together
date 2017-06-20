@@ -2,19 +2,26 @@
 
 class Location
   def self.init
-    @trieds = read_locations("tried.txt")
-    @not_trieds = read_locations ("not_tried.txt")
+    @locations = read_locations("tried.txt")
   end
 
-  def self.esc(text)
-    #Rack::Utils.escape_html(text)
-    text
-  end
+  # def self.esc(text)
+  #   Rack::Utils.escape_html(text)
+  # end
 
   def self.read_locations(fn)
+    locs = {:tried => [], :not_tried => []}
+
   	File.open(fn, "r:UTF-8") do |f| 
-      f.read.split("\n").compact
-    end 
+      line = f.read.split("\n").compact
+      if line[1].downcase=="tried"
+        locs[:tried] << line[0]
+      elsif line[1].downcase=="not-tried"
+        locs[:not_tried] << line[0]
+      end
+    end
+
+    locs
   end
   
   def self.suggest
@@ -29,14 +36,14 @@ class Location
   end
 
   def self.tried
-    @trieds.collect {|x| {:name => esc(x)}}
+    @locations[:tried]
   end
 
   def self.not_tried
-    @not_trieds.collect {|x| {:name => esc(x)}}
+    @locatoins[:not_tried]
   end
 
   def self.all
-    tried.collect {|x| {name: x[:name], status: 'tried'}} + not_tried.collect {|x| {name: x[:name], status: 'not-tried'}}
+    tried.collect {|x| {name: x[:name], status: "tried"}} + not_tried.collect {|x| {name: x[:name], status: "not-tried"}}
   end
 end
