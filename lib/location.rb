@@ -2,7 +2,7 @@
 
 class Location
   def self.init
-    @locations = read_locations("tried.txt")
+    @locations = read_locations("locations.txt")
   end
 
   # def self.esc(text)
