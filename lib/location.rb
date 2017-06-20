@@ -40,7 +40,7 @@ class Location
   end
 
   def self.not_tried
-    @locatoins[:not_tried]
+    @locations[:not_tried]
   end
 
   def self.all
