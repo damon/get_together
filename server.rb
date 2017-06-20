@@ -26,18 +26,6 @@ get '/locations/not-tried' do
   json Location.not_tried
 end
 
-
 get '/locations' do
-  # default: all
-  result = Location.all
-
-  # if params[:filter]
-  # 	if params[:filter].downcase=="tried"
-  #     result = Location.tried
-  #   elsif params[:filter].downcase=="not-tried"
-  #     result = Location.not_tried
-  #   end
-  # end
-  
-  json result
+  json Location.all
 end
