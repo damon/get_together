@@ -12,6 +12,10 @@ configure do
   Location.init
 end
 
+before do
+  response.headers['Access-Control-Allow-Origin'] = '*'
+end
+
 get '/' do
   "<html><body><h1>Hi! 👋 <br/>I suggest you try #{Location.suggest[:name]}</h1></body></html>"
 end
