@@ -1,13 +1,19 @@
 require 'sinatra'
 require 'sinatra/json'
+require 'sinatra/cross_origin'
 require 'json'
 
 configure do
+  enable :cross_origin
   $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/lib")
   Dir.glob("#{File.dirname(__FILE__)}/lib/*.rb") { |lib| 
     require File.basename(lib, '.*') 
   }
   Location.init
+end
+
+before do
+  response.headers['Access-Control-Allow-Origin'] = '*'
 end
 
 get '/' do
