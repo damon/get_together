@@ -8,7 +8,8 @@ Figure 8 Coffee Purveyors,not tried
 Sa-Ten Coffee and Eats, not-tried
 Flat Track Coffee,not-tried
 Forthright,not-tried
-Jo's (SoCo),not-tried
+Jo's (SoCo),tried
 Stonehouse Coffee and Bar,not-tried
 Stouthaus Coffee Pub,not-tried
 Alta's Cafe,not-tried
+Tom's (SoCo),not-tried
