@@ -14,3 +14,5 @@ Stouthaus Coffee Pub,not-tried
 Alta's Cafe,not-tried
 Tom's (SoCo),not-tried
 Austin Java (2nd),tried
+Houndstooth Coffee (Frost),not-tried
+Caffe Medici (Congress),not-tried
